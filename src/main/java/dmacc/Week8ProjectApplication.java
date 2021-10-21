@@ -44,7 +44,7 @@ public class Week8ProjectApplication implements CommandLineRunner{
 
 		Person d = new Person("Andrew", 18, "Single");
 		Job a = new Job("987 Elm Court", "Altoona", "IA");
-		d.setRelationship("married");
+		d.setJob(a);
 		repo.save(d);
 		
 		List<Person> allMyPeople = repo.findAll();
