@@ -47,8 +47,8 @@ public class Week8ProjectApplication implements CommandLineRunner{
 		d.setRelationship("married");
 		repo.save(d);
 		
-		List<Person> allMyContacts = repo.findAll();
-		for(Person people: allMyContacts) {
+		List<Person> allMyPeople = repo.findAll();
+		for(Person people: allMyPeople) {
 			System.out.println(people.toString());
 		}
 		

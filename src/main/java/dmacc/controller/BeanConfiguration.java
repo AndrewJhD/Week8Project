@@ -10,6 +10,9 @@ public class BeanConfiguration {
 	@Bean
 	public Person contact() {
 		Person bean = new Person();
+		bean.setAge(18);
+		bean.setName("Bob");
+		bean.setRelationship("single");
 		return bean;
 	}
 	@Bean
