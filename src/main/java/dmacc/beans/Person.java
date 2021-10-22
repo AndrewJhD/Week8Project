@@ -67,7 +67,7 @@ public class Person {
 		return job;
 	}
 
-	public void Job(Job job) {
+	public void setJob(Job job) {
 		this.job = job;
 	}
 	@Override
