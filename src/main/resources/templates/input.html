@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert New or Edit Persons</title>
+</head>
+<body>
+<form th:object="${newPerson}" th:action= "@{/update/{id}(id=${newPerson.id})}" method=POST>
+Name: <input name="name" size="20" th:field="*{name}"><br /> 
+Age: <input name="age" size="20" th:field="*{age}"><br />
+Relationship Status: <input name="relationship" size="20" th:field="*{relationship}"><br />
+Job Occupation: <input name="job.occupation" size="20" th:field="*{job.occupation}"><br /> 
+Company Name: <input name="job.CompName" size="20" th:field="*{job.CompName}"><br /> 
+Job Address: <input name="job.address" size="20" th:field="*{job.address}"><br /> 
+
+<input name= "submit" type="submit" value="submit"/>
+</form>
+<a href="viewAll">View all Persons</a>
+
+</body>
+</html>

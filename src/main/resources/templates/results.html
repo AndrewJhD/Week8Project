@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>View All People</title>
+</head>
+<body>
+<form>
+<table>
+<tr th:each="currentPerson : ${persons}">
+		<td th:text="${currentPerson.id}"/>
+		<td th:text="${currentPerson.name}"/> 
+		<td th:text="${currentPerson.age}"/> 
+		<td th:text="${currentPerson.relationship}"/> 
+		<td th:text="${currentPerson.job.occupation}"/> 
+		<td th:text="${currentPerson.job.CompName}"/> 
+		<td th:text="${currentPerson.job.address}"/> 
+		<td><a th:href="@{/edit/{id}(id=${currentPerson.id})}">Edit</a></td>
+		<td><a th:href="@{/delete/{id}(id=${currentPerson.id})}">Delete</a></td>
+
+</tr>
+</table>
+</form>
+<a href="../inputPerson">Insert New or Edit Person</a>
+</body>
+</html>

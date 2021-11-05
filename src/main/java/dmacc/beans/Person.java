@@ -1,12 +1,15 @@
 package dmacc.beans;
 
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import lombok.Data;
 
 @Entity
+@Data
 public class Person {
 	@Id
 	@GeneratedValue
@@ -17,7 +20,7 @@ public class Person {
 	@Autowired
 	private Job job;
 
-	public Person() {
+	/*public Person() {
 	super();
 	this.relationship = "taken";
 
@@ -73,5 +76,5 @@ public class Person {
 	@Override
 	public String toString() {
 		return "Contact [id=" + id + ", name=" + name + ", age=" + age + ", relationship=" + relationship
-				+ ", job=" + job +"]";	}
+				+ ", job=" + job +"]";	}*/
 }

@@ -2,12 +2,20 @@ package dmacc.beans;
 
 import javax.persistence.Embeddable;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Embeddable
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Job {
 	private String occupation;
 	private String CompName; // company name
 	private String address;
-	public Job() {
+	
+	/*public Job() {
 		super();
 	}
 	
@@ -24,11 +32,11 @@ public class Job {
 	public void setOccupation(String occupation) {
 		this.occupation = occupation;
 	}
-	public String getcompName() {
+	public String getCompName() {
 		return CompName;
 	}
-	public void setcompName(String compName) {
-		this.CompName = compName;
+	public void setCompName(String CompName) {
+		this.CompName = CompName;
 	}
 	public String getAddress() {
 		return address;
@@ -39,5 +47,5 @@ public class Job {
 	@Override
 	public String toString() {
 		return "Job [occupation=" + occupation + ", company name=" + CompName + ", address=" + address + "]";
-	}
+	}*/
 }
